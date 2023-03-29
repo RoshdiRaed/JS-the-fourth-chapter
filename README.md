@@ -4,7 +4,7 @@
 
 --------------------------------------------------
 
-<img src="./image/come.png"> | <img src="./image/come2.png"> 
+<img src="./image/come.png"> | <img src="./image/come-2.png"> 
 
 --------------------------------------------------
 
