@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./sun.png" type="image/x-icon">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        div {
+            background-color: blueviolet;
+        }
+        img {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="./night-mode.png" alt="mon" width="40" height="40">
+    </div>
+    <p>Hi mom</p>
+    <script>
+        let div1 = document.querySelector("div");
+        let img1 = document.querySelector("img");
+        let p1 = document.querySelector("p");
+        let dack = false;
+        img1.onclick = () => {
+            if (dack==false) {
+                img1.src="./sun.png";
+                document.body.style.backgroundColor= "#ff1";
+                p1.style.color = "#000"
+                div1.style.backgroundColor = "#f95";
+                dack = true;
+            }else{
+                
+                img1.src="./night-mode.png";
+                document.body.style.backgroundColor= "#fff";
+                p1.style.color = "#000"
+                div1.style.backgroundColor = "#ee9";
+                dack = false;
+            
+            }
+        };
+        </script>
+</body>
+</html>

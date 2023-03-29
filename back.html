@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background</title>
+</head>
+
+<body>
+    <div>
+        Hi Mom
+    </div>
+    <button>Dark</button>
+    <button>Light</button>
+    <button>Show</button>
+    <button>Hide</button>
+    <script>
+        let btn = document.querySelectorAll("button");
+        let d = document.querySelector("div");
+        btn[0].onclick = function () {
+            document.body.style.backgroundColor = "#444";
+        }
+        btn[1].onclick = function () {
+            document.body.style.backgroundColor = "#eee";
+        };
+        btn[2].onclick = function () {
+            d.style.display = "block";
+        };
+        btn[3].onclick = function () {
+            d.style.display = "none";
+        };
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="password">
+    </div>
+    <img src="./eye.png" alt="eye" height="20" width="20" />
+    <script>
+        let img1 = document.getElementsByTagName("img");
+        let in__pass = document.querySelector("input");
+        let show = false;
+        img1[0].onclick = () => {
+            if (show == false) {
+                img1[0].src = "./hidden.png";
+                in__pass.type = "text";
+                show = true;
+            } else {
+                img1[0].src = "./eye.png";
+                in__pass.type = "password";
+                show = false;
+            }
+        };
+    </script>
+</body>
+
+</html>

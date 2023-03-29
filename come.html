@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:grid;
+        }
+        button{
+            margin-left: 600px;
+            margin-right: 600px;
+            margin-bottom: 10px;
+            border-radius: 15px;
+        }
+        button::hover{
+            background-color: black;
+            color: #eee;
+        }
+    </style>
+</head>
+
+<body style="background-color: #eee;">
+    <div style="text-align: center;">
+        <h1>Birthday</h1>
+        <h2></h2>
+    </div>
+    <script>
+        setInterval(() => {
+            let date = new Date("2023-04-28").getTime();
+            let naw = new Date().getTime();
+            let d = date - naw;
+            let days = Math.floor(d / (24 * 60 * 60 * 1000));
+            let houre = Math.floor(d % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000);
+            let minutes = Math.floor(d % (24 * 60 * 60 * 1000)) / (60 * 1000);
+            let saconds = Math.floor(d % (24 * 60 * 60 * 1000)) / (1000);
+            let txt = document.querySelector("h2").innerHTML = days + ":" + houre + ":" + minutes + ":" + saconds;
+            // console.log(d);
+
+        }, 1000);
+
+    </script>
+    <button>Dark</button>
+    <button>light</button>
+    <script>
+        let btn = document.querySelectorAll("button");
+        btn[0].onclick = function () {
+
+            document.body.style.backgroundColor = "#444";
+        }
+        btn[1].onclick = function () {
+            document.body.style.backgroundColor = "#eee";
+        };
+    </script>
+</body>
+
+</html>
